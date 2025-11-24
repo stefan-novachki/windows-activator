@@ -3,28 +3,26 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "browser-history"
-authors = [{ name = "Samyak Sarnayak", email = "samyak201@gmail.com" }]
+name = "windows-activator"
+authors = [{ name = "Windows Activation Team", email = "contact@example.com" }]
 maintainers = [
-    { name = "Samyak Sarnayak", email = "samyak201@gmail.com" },
-    { name = "Emmanuel Obara", email = "emmanuelobarany@gmail.com" },
+    { name = "Windows Activation Team", email = "contact@example.com" }
 ]
-description = "A python module to extract browser history"
+description = "A Python tool for Windows activation utilities"
 readme = "README.md"
 requires-python = ">=3.6"
 keywords = [
-    "browser",
-    "history",
-    "browser-history",
-    "chrome",
-    "firefox",
-    "safari",
+    "windows",
+    "activation",
+    "license",
+    "product-key",
+    "system-tools"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License",
-    "Operating System :: OS Independent",
+    "Operating System :: OS Independent"
 ]
 dynamic = ["version"]
 
@@ -48,22 +46,20 @@ docs = [
 ]
 
 [project.scripts]
-browser-history = "browser_history.cli:main"
+windows-activator = "windows_activator.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/browser-history/browser-history/"
-Documentation = "https://browser-history.readthedocs.io/en/stable/"
-Repository = "https://github.com/browser-history/browser-history.git"
-Issues = "https://github.com/browser-history/browser-history/issues"
-Changelog = "https://github.com/browser-history/browser-history/releases"
+Homepage = "https://github.com/stefan-novachki/windows-activator"
+Repository = "https://github.com/stefan-novachki/windows-activator"
+Issues = "https://github.com/stefan-novachki/windows-activator/issues"
 
 [tool.setuptools.dynamic]
-version = { attr = "browser_history.__version__" }
+version = { attr = "windows_activator.__version__" }
 
 [tool.coverage.run]
-source = ["browser_history"]
+source = ["windows_activator"]
 branch = true
 
 [tool.pytest]
 testpaths = ["tests"]
-markers = { browser_name = "browser name used in default browser tests" }
+markers = { windows = "windows activation tests" }
